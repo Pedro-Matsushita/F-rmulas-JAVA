@@ -3,29 +3,29 @@ public class metodos
 {
 static Scanner teclado = new Scanner(System.in);
 public static void main(String[] args){
-    int vet[] = new int[5];
-    int procurado = 10;
+    double vet[] = new double[5];
+    double procurado = 10;
     int tamanho = vet.length;
 
     entradaValores(vet);
 
-    int encontraMaiorouMenor[] = metodoBolha(vet);
+    //int encontraMaiorouMenor[] = metodoBolha(vet);
+    exibeVetor(vet);
+    int buscarNumero = buscaSequencial(vet, procurado, tamanho);
 
-   //int buscarNumero = buscaSequencial(vet, procurado, n);
-
-   exibeVetor(vet);
+  
 }
-public static void entradaValores(int vet[]){
+public static void entradaValores(double vet[]){
     Random r = new Random();
     for(int i = 0; i<vet.length; i++){
         System.out.print("Digite o valor do vetor: ");
-        vet[i] = r.nextInt(15);
+        vet[i] = r.nextDouble(15);
     }
     System.out.println();
 }
 //Método bolha encontrar o maior ou menor número e colocar em ordem
 //crescente ou decrescente
-public static int[] metodoBolha(int vet[]){
+/*public static int[] metodoBolha(int vet[]){
     int tamanho = vet.length;
     while(tamanho >= 2){
         for(int i = 0; i < tamanho-1; i++){
@@ -38,8 +38,8 @@ public static int[] metodoBolha(int vet[]){
         tamanho = tamanho - 1;
     }
     return vet;
-}
-/*public static int buscaSequencial(double vet[], double procurado, int tamanho){
+}*/
+public static int buscaSequencial(double vet[], double procurado, int tamanho){
     boolean achou = false;
     int i;
 
@@ -61,8 +61,8 @@ public static int[] metodoBolha(int vet[]){
     else{
         return -1; // retorna -1 indicando que não achou a chave
     }
-}*/
-public static void exibeVetor(int vet[]){
+}
+public static void exibeVetor(double vet[]){
     for(int i = 0; i < vet.length; i++){
         System.out.println(vet[i]);
     }
