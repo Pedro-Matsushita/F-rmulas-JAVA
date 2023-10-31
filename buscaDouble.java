@@ -35,7 +35,8 @@ public class buscaDouble {
             else{
                 inicio = meio+1;
             }
-        }          
+        }
+            System.out.println("O número não foi encontrado!");          
             return -1;
     }
 }
